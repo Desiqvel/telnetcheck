@@ -25,11 +25,7 @@ def addport(port):
 def istelnet(port):
     cmd = ("nc -w3 -z -v %s %s 2>&1 | grep telnet | grep open" % (dName, port) )
     check = os.popen(cmd).read()
-    print("inne i istelnet check: " + check)  # test code + "cmd: " + cmd)
-#    if check == '':
-#       cmd = ("nc -w3 -z -u -v %s %s 2>&1 | grep open" % (dName, port) )
-#       check = os.popen(cmd).read()
-#       print("inne i istelnet -u- check: " + check + "cmd: " + cmd)
+#    print("inne i istelnet check: " + check)  # test code + "cmd: " + cmd)
     if check == '':
         check = 0
     else:
